@@ -1,11 +1,14 @@
-import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-const minWidthPx = 200;
-const defaultWidth = 350;
-const maxWidthPercent = 30;
-
-export default function Resizable({ children, className, side = 'right' }) {
-    const [width, setWidth] = useState(parseInt(localStorage.getItem('resizableWidth')) || defaultWidth);
+export default function Resizable({
+    children,
+    className,
+    side = 'right',
+    minWidthPx = 200,
+    defaultWidthPx = 350,
+    maxWidthPercent = 30,
+}) {
+    const [width, setWidth] = useState(parseInt(localStorage.getItem('resizableWidth')) || defaultWidthPx);
     const [isResizing, setIsResizing] = useState(false);
     const resizableRef = useRef(null);
 
