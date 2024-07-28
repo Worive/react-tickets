@@ -24,7 +24,7 @@ export default function ForgotPassword({ status }) {
                 reset link that will allow you to choose a new one.
             </div>
 
-            {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
+            {status && <div className="mb-4 text-sm font-medium text-green-600">{status}</div>}
 
             <form onSubmit={submit}>
                 <TextInput
@@ -39,7 +39,7 @@ export default function ForgotPassword({ status }) {
 
                 <InputError message={errors.email} className="mt-2" />
 
-                <div className="flex items-center justify-end mt-4">
+                <div className="mt-4 flex items-center justify-end">
                     <PrimaryButton className="ms-4" disabled={processing}>
                         Email Password Reset Link
                     </PrimaryButton>

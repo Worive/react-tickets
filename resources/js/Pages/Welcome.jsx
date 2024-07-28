@@ -17,10 +17,10 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     className="absolute -left-20 top-0 max-w-[877px]"
                     src="https://laravel.com/assets/img/welcome/background.svg"
                 />
-                <div className="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
+                <div className="relative flex min-h-screen flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
                     <div className="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                         <header className="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                            <div className="flex lg:justify-center lg:col-start-2">
+                            <div className="flex lg:col-start-2 lg:justify-center">
                                 <svg
                                     className="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]"
                                     viewBox="0 0 62 65"
@@ -74,13 +74,13 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         <img
                                             src="https://laravel.com/assets/img/welcome/docs-light.svg"
                                             alt="Laravel documentation screenshot"
-                                            className="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
+                                            className="aspect-video h-full w-full flex-1 rounded-[10px] object-cover object-top drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
                                             onError={handleImageError}
                                         />
                                         <img
                                             src="https://laravel.com/assets/img/welcome/docs-dark.svg"
                                             alt="Laravel documentation screenshot"
-                                            className="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
+                                            className="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-cover object-top drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
                                         />
                                         <div className="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"></div>
                                     </div>
