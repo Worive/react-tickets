@@ -60,7 +60,7 @@ export default function Resizable({
     const handleMouseDown = useCallback(() => {
         setIsResizing(true);
         document.body.style.userSelect = 'none'; // Disable text selection
-        document.body.style.cursor = 'col-resize'; // Change cursor to col-resize
+        document.body.style.cursor = 'e-resize'; // Change cursor to col-resize
     }, []);
 
     const handleStyle = useMemo(() => {
@@ -73,17 +73,17 @@ export default function Resizable({
 
     return (
         <div className="relative flex">
-            <div ref={resizableRef} style={{ width: `${width / 16}rem` }} className={className}>
+            <div ref={resizableRef} style={{ width: `${width / 16}rem` }} className={`overflow-x-hidden ${className}`}>
                 {children}
             </div>
 
             <div
-                className="absolute h-full w-[20px] cursor-col-resize"
+                className="group absolute h-full w-[20px] cursor-e-resize"
                 style={handleStyle}
                 onMouseDown={handleMouseDown}
             >
                 <div
-                    className={`h-full w-[2px] ${isResizing ? 'bg-blue-500' : 'bg-gray-300'}`}
+                    className={`h-full w-[2px] transition-colors ${isResizing ? 'bg-blue-500' : 'bg-gray-300'} group-hover:bg-blue-500`}
                     style={handleLineStyle}
                 ></div>
             </div>
