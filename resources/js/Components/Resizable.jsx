@@ -34,7 +34,7 @@ export default function Resizable({
                 return isWidthInRange ? newWidth : previousWidth;
             });
         },
-        [isResizing, side]
+        [isResizing, side, minWidthPx, maxWidthPercent]
     );
 
     const handleMouseUp = useCallback(() => {
